@@ -4,10 +4,7 @@ if (!Array.prototype.every) {
     var index = 0;
     var array = Object(this);
     var length = array.length >>> 0;
-
-    if (arguments.length > 1) {
-      var thisArguments = callbackArguments;
-    }
+    var thisArguments = arguments[1];
 
     while (index < length) {
       var value;
