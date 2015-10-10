@@ -1,5 +1,5 @@
 if (!Array.prototype.forEach) {
-    Array.prototype.forEach = function (function, arguments) {
+    Array.prototype.forEach = function (function) {
         var array = Object(this),
             length = array.length >>> 0;
             
@@ -9,7 +9,7 @@ if (!Array.prototype.forEach) {
         
         for (var i = 0; i < length; i ++) {
             if (array.hasOwnProperty(i)) {
-                function.call(arguments, array[i], i, array);
+                function.call(arguments[1], array[i], i, array);
             }
         }
         return undefined;
