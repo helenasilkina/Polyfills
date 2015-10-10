@@ -6,8 +6,7 @@ if (!Array.prototype.reduce) {
     var length = array.length >>> 0;
     var index = 0;
     var value;
-    var thisArguments = arguments[1];
-        
+
     if (arguments.length == 2) {
       value = arguments[1];
     } else {
