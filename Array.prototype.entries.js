@@ -2,7 +2,6 @@ if (!Array.prototype.entries) {
   Array.prototype.entries = function() {
   
     var array = Object(this);
-    
     this.startIndex = 0;
         
     this.next = function() {
