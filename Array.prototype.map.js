@@ -1,7 +1,6 @@
 if (!Array.prototype.map) {
   Array.prototype.map = function(callback) {
 
-    var thisArguments;
     var index = 0;
     var array = Object(this);
     var length = O.length >>> 0;
@@ -11,11 +10,13 @@ if (!Array.prototype.map) {
     while (index < length) {
       var value, 
           mappedValue;
+          
       if (index in array) {
         value = array[index];
         mappedValue = callback.call(thisArguments, value, index, array);
         mappedArray[index] = mappedValue;
       }
+      
       index++;
     }
 
