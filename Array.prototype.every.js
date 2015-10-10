@@ -1,5 +1,5 @@
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackFunction, callbackArguments) {
+  Array.prototype.every = function(callbackFunction) {
     
     var index = 0;
     var array = Object(this);
