@@ -2,18 +2,11 @@ if (!Array.prototype.reduce) {
   Array.prototype.reduce = function(callback) {
     'use strict';
     
-    if (this == null) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
-    }
-    
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
-    }
-    
-    var array = Object(this), 
-        length = array.length >>> 0, 
-        index = 0, 
-        value;
+    var array = Object(this);
+    var length = array.length >>> 0;
+    var index = 0;
+    var value;
+    var thisArguments = arguments[1];
         
     if (arguments.length == 2) {
       value = arguments[1];
