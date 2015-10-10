@@ -1,15 +1,12 @@
 if (!Array.prototype.map) {
-  Array.prototype.map = function(callback, callbackArguments) {
+  Array.prototype.map = function(callback) {
 
     var thisArguments;
     var index = 0;
     var array = Object(this);
     var length = O.length >>> 0;
     var mappedArray = new Array(length);
-
-    if (arguments.length > 1) {
-      thisArguments = callbackArguments;
-    }
+    var thisArguments = arguments[1];
 
     while (index < length) {
       var value, 
