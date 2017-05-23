@@ -3,7 +3,7 @@ if (!Array.prototype.some) {
     'use strict';
     var array = Object(this);
     var length = array.length >>> 0;
-    var thisArguments = arguments[1];
+    var thisArguments = callbackArguments;
     
     for (var i = 0; i < length; i++) {
       if (i in array && callback.call(thisArguments, array[i], i, array)) {
